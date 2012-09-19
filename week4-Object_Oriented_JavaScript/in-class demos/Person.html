@@ -1,0 +1,47 @@
+<script type="text/javascript">
+
+var Person = function(name) { // constructor function
+	this.name = name;
+
+	// this.sayWassup = function() {
+	// 	console.log("Wassup, my name is " + this.name);
+	// }
+
+};
+
+// prototype property all objects inherit from
+// JavaScript is a prototypal inheritance language
+// This makes sure that the function is created only once
+//   When you declare method in constrctor function, you are creating a new function every time, taking up more memory
+// By prototyping, all objects are referencing the same functino
+
+// Person.prototype.sayWassup = functnio() {
+// 	console.log('Wassup, I\'m ' + this.name)
+// }
+
+Person.prototype.hi = function() {
+	alert('Hi!');
+}
+
+// all protoype objects have a reference to the object that created it
+
+Person.prototype = {
+	sayWassup: function() {
+		console.log("Wassup, my name is " + this.name);
+	},
+
+	// by making a prototype methods an object, you lose reference to to the object that created it
+
+	constructor: Person
+};
+
+// Instead of class Person extends Human
+// 
+
+// if you don't call the constructor function through new, 
+// this.name becomes a global variable on the window object
+var david = new Person('David Tang');
+console.log(david);
+var john = new Person('John Doe');
+console.log(john);
+</script>

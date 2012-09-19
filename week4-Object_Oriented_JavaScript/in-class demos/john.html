@@ -1,0 +1,22 @@
+<script>
+var john = {
+	name: 'John',
+	age: 52,
+	sayWassup: function() {
+		console.log('Wassup, my name is ' + this.name);
+	}
+};
+
+var validation = {
+	isEmpty: functino(val) {
+		val = String(val);
+		if (val.length > 2) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+};
+
+console.log(validation.isEmpty("John"));
+</script>
