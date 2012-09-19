@@ -1,0 +1,42 @@
+<script type="text/javascript">
+
+var honda = {};
+
+var Car = function() {
+};
+
+Car.prototype = {
+	constructor: Car,
+	drive: function () {
+		console.log("Im driving.");
+	}
+};
+
+var Suv = function(type) {
+	this.type = type;
+};
+
+Suv.prototype = new Car();
+Suv.prototype.constructor = Suv;
+
+var davidsCar = new Suv('Honda');
+
+// It's a pain to write
+// var d = new Object();
+// d.nane = "smoething";
+// d.age = 32;
+
+// new Object() => {}
+// new String => " ";
+// new Number() => 26;
+// new RegExp() => / /;
+// new XMLHttpRequest() => 
+
+// $(''), jQuery('')
+// new jQuery('')
+// var jQuery = function() {};
+// jQuery.prototype = {
+// 	html: function(){},
+// 	prev: f
+// }
+</script>

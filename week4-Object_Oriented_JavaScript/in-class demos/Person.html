@@ -1,8 +1,10 @@
 <script type="text/javascript">
 
-var Person = function(name) { // constructor function
+var Person = function(name, age) { // constructor function
 	this.name = name;
-
+	this.age = age;
+	// this takes precedence over what's defined in the prototype
+	
 	// this.sayWassup = function() {
 	// 	console.log("Wassup, my name is " + this.name);
 	// }
@@ -25,22 +27,31 @@ Person.prototype.hi = function() {
 
 // all protoype objects have a reference to the object that created it
 
+// Instead of class Person extends Human
 Person.prototype = {
+	// by making a prototype methods an object, you lose reference to to the object that created it
+	constructor: Person,
+
 	sayWassup: function() {
 		console.log("Wassup, my name is " + this.name);
 	},
 
-	// by making a prototype methods an object, you lose reference to to the object that created it
+	setAge: function(age) {
+		this.age = age;
+	},
 
-	constructor: Person
+	age: 32
 };
 
-// Instead of class Person extends Human
-// 
+// When searching for a value, searches in order:
+// 1. david.age
+// 2. Person.prototype.age
 
 // if you don't call the constructor function through new, 
 // this.name becomes a global variable on the window object
-var david = new Person('David Tang');
+var david = new Person('David Tang', 26);
+david.setAge(26);
+// david.age = 26;
 console.log(david);
 var john = new Person('John Doe');
 console.log(john);
