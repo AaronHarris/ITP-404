@@ -1,0 +1,21 @@
+<div id="some-div">
+	<a href="#" id="some-link">Some link</a>	
+</div>
+
+<script>
+
+// W3C model (Chrome, Safari, FF, Opera)
+document.getElementById('some-div').addEventListener('click', function(e) {
+	console.log(e.target);
+	e.preventDefault();
+}, false);
+
+
+// IE
+document.getElementById('some-div').attachEvent('onclick', function() {
+	var evt = window.event;
+	console.log(evt.srcElement);
+	evt.returnValue = false;
+}, false);
+
+</script>
