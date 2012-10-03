@@ -1,0 +1,32 @@
+10/2/2012
+## Installation
+On windows, install XAMPP portable lite .zip -> trouble with install version
+Place extracted xampp folder into root C drive
+
+Where you will be placing files is in htdocs
+Click on xampp_start.exe to open console and start server, don't forget to run xampp_stop.exe to stop server
+
+go to localhost to see what's going on
+## Make your own directory
+inside htdocs, create the php_into directory, add demo1.php
+go to localhost/php_intro/demo1 to see page
+
+## PHP
+'superglobals' ie. $_GET
+get request appents formdata to url, ie. localhost/file.php?name=value&name=value
+
+In request, header has info about request, body has the data you are sending
+In response, header has info about whether request successful, body contains returned data (html)
+
+You can only modify header once you've had output
+	- put header modification above the html tag
+
+make sure you use localhost and not file protocol in browser
+in Chrome, go to inspect element, go to Network tab, you can see headers
+200 - server error, 500 - php error, 400 - page not found
+
+good idea to declare functions at the top of the process file, before any output
+no semicolon needed at end of functino declaration
+
+to include the contents of another file: require('$local_file') - page fails to load if require not met
+import('$local_file') - warning, but no error if import doesn't happen

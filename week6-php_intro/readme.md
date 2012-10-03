@@ -23,7 +23,7 @@
 PHP is a server-side language typically used with the Apache web server and MySQL database.
 
 ###Installation
-You could install PHP, Apache, and MySQL yourself, but there are tools out there that make this process really easy. On MAC, install MAMP (Mac Apache MySQL PHP). On Windows, install either WAMP (Windows Apache MySQL PHP) or XAMP (Apache MySQL PHP). The X in XAMP stands for cross platform because it could be installed on multiple platforms.
+You could install PHP, Apache, and MySQL yourself, but there are tools out there that make this process really easy. On MAC, install MAMP (Mac Apache MySQL PHP). On Windows, install either WAMP (Windows Apache MySQL PHP) or XAMPP (Apache MySQL PHP). The X in XAMP stands for cross platform because it could be installed on multiple platforms.
 
 To get running, place all of your php scripts in the __htdocs__ folder and navigate to:
 
